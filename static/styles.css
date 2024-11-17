@@ -140,3 +140,13 @@ table.table td i {
     margin-top: 6px;
     font-size: 95%;
 }
+
+.border-alive{
+    border-color: green;
+}
+.border-dead{
+    border-color: red;
+}
+.border-unknown{
+    border-color: orange;
+}

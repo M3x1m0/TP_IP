@@ -1,6 +1,5 @@
 # capa de vista/presentación
 from django.shortcuts import redirect, render
-
 from app.layers.persistence import repositories
 from .layers.services import services
 from django.contrib.auth.decorators import login_required
@@ -24,7 +23,7 @@ def search(request):
     # y luego renderiza el template (similar a home).
     if (search_msg != ''):
         images = services.getAllImages(search_msg)
-        favourite_list = services.getAllImages(search_msg)
+        favourite_list = services.getAllFavourites(search_msg)
         return render(request, 'home.html', { 'images': images, 'favourite_list': favourite_list })
 
     else: return home(request)
